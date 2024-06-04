@@ -1,0 +1,48 @@
+# Dependências do Node
+node_modules/
+npm-debug.log
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+.pnpm-debug.log*
+
+# Diretórios de upload de arquivos
+uploads/
+
+# Arquivos de ambiente
+.env
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Cache do teste
+.nyc_output
+
+# Diretórios de relatórios de cobertura
+coverage/
+
+# Diretórios de relatórios de error
+error-reports/
+
+# IDEs e editores
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Ignorar arquivos temporários e backups
+*~
+*.swp
+*.bak
+*.tmp
