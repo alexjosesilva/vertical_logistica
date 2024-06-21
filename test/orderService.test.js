@@ -1,5 +1,5 @@
-const orderService = require('/services/orderService');
-const fileHandler = require('/utils/fileHandler');
+const orderService = require('../services/orderService');
+const fileHandler = require('../utils/fileHandler');
 const fs = require('fs');
 
 test('processFile should process the file correctly', () => {
