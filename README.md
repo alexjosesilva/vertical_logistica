@@ -1,6 +1,9 @@
 ﻿[![Latest Version](https://img.shields.io/github/v/release/alexjosesilva/crm_postogasolinas_Logus_mvc?include_prereleases)](https://github.com/alexjosesilva/crm_postogasolinas_Logus_mvc/releases/tag/1.0)
 [![License](https://img.shields.io/github/license/alexjosesilva/logus-microservice-gas-station)]([https://github.com/seu-usuario/seu-repositorio/blob/master/LICENSE](https://github.com/alexjosesilva/logus-microservice-gas-station/blob/master/LICENSE))
-
+[![codecov](https://codecov.io/gh/alexjosesilva/vertical-logistica-java/graph/badge.svg?token=GUWHI4VKML)](https://codecov.io/gh/alexjosesilva/vertical_logistica)
+![Contribuidores](https://img.shields.io/github/contributors/alexjosesilva/vertical_logistica)
+![Último commit](https://img.shields.io/github/last-commit/alexjosesilva/vertical_logistica)
+![Docker Image Build](https://github.com/alexjosesilva/vertical_logistica/actions/workflows/docker-image.yml/badge.svg)
 
 # Projeto de Software para Realizar a integração entre dois Sistemas
 
