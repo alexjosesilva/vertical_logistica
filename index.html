@@ -3,65 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vertical Logística</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Projeto de Software para Realizar a Integração entre dois Sistemas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        ul, ol {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li, ol li {
+            background: #e9e9e9;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+        .code-block {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Vertical Logística</h1>
-        <nav>
-            <ul>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#tecnologias">Tecnologias Utilizadas</a></li>
-                <li><a href="#executar">Como Executar</a></li>
-                <li><a href="#endpoints">Endpoints</a></li>
-                <li><a href="#estrutura">Estrutura do Projeto</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="sobre">
-            <h2>Sobre o Projeto</h2>
-            <p>Este projeto é uma API REST desenvolvida em Java 21 com Spring Boot para processar arquivos de pedidos de um sistema legado, transformando-os em JSON normalizado. O objetivo é integrar dois sistemas, recebendo um arquivo via API REST, processando-o e retornando os dados em um formato estruturado.</p>
-        </section>
-        <section id="tecnologias">
-            <h2>Tecnologias Utilizadas</h2>
-            <ul>
-                <li>Java 21</li>
-                <li>Spring Boot</li>
-                <li>Maven</li>
-                <li>JaCoCo para cobertura de testes</li>
-                <li>Codecov para integração contínua de cobertura de testes</li>
-                <li>Docker</li>
-            </ul>
-        </section>
-        <section id="executar">
-            <h2>Como Executar</h2>
-            <ol>
-                <li>Clone o repositório.</li>
-                <li>Navegue até o diretório do projeto.</li>
-                <li>Execute o comando <code>mvn spring-boot:run</code>.</li>
-            </ol>
-        </section>
-        <section id="endpoints">
-            <h2>Endpoints</h2>
-            <ul>
-                <li><code>POST /api/orders/upload</code>: Faz o upload do arquivo de pedidos e retorna os dados processados em formato JSON.</li>
-            </ul>
-        </section>
-        <section id="estrutura">
-            <h2>Estrutura do Projeto</h2>
-            <ul>
-                <li><strong>controller</strong>: Contém os controladores REST.</li>
-                <li><strong>service</strong>: Contém a lógica de negócios.</li>
-                <li><strong>model</strong>: Contém as classes de modelo (entidades).</li>
-                <li><strong>repository</strong>: Contém as interfaces de repositório (opcional).</li>
-                <li><strong>exception</strong>: Contém as classes de exceção personalizada.</li>
-            </ul>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 - Alex José Silva</p>
-    </footer>
+    <div class="container">
+        <h1>Projeto de Software para Realizar a Integração entre dois Sistemas</h1>
+        <p>Este é um projeto de software desenvolvido para realizar a comunicação entre dois sistemas, um legado e outro em tecnologia emergente, utilizando a arquitetura SOA (Orientado a Serviços) e seguindo a implementação de APIs RestFul. O sistema legado possui um arquivo de pedidos desnormalizado, e precisamos transformá-lo em um arquivo JSON normalizado.</p>
+
+        <h2>Funcionalidades</h2>
+        <p>O software oferece as seguintes funcionalidades:</p>
+        <ul>
+            <li>O sistema recebe um arquivo via API REST e processa-o para ser retornado via API REST (formato JSON)</li>
+        </ul>
+
+        <h2>Tecnologias Utilizadas</h2>
+        <ul>
+            <li>Node.js</li>
+            <li>Express</li>
+            <li>Multer</li>
+        </ul>
+
+        <h2>Como Executar</h2>
+        <ol>
+            <li>Clone o repositório</li>
+            <li>Instale as dependências: <code>npm install</code></li>
+            <li>Execute a aplicação: <code>node index.js</code></li>
+        </ol>
+        <p>Para testar a API, use ferramentas como Postman para enviar um arquivo para <code>/api/orders/upload</code> e consultar dados em <code>/api/orders</code>.</p>
+
+        <h2>Endpoints</h2>
+        <ul>
+            <li><code>POST http://localhost:3001/api/orders/upload</code> - Envia um arquivo de pedidos desnormalizado.</li>
+            <li><code>GET http://localhost:3001/api/orders</code> - Consulta os pedidos transformados.</li>
+        </ul>
+
+        <h2>Estrutura do Projeto</h2>
+        <div class="code-block">
+            <pre>
+project-root/
+│
+├── src/
+│   ├── controllers/
+│   │   └── orderController.js
+│   ├── services/
+│   │   └── orderService.js
+│   ├── utils/
+│   │   └── fileHandler.js
+│   ├── routes/
+│   │   └── orderRoutes.js
+│   ├── models/
+│   │   └── orderModel.js
+│   └── index.js
+│
+├── test/
+│   ├── orderService.test.js
+│
+├── uploads/
+│   └── (Uploaded files)
+│
+├── .gitignore
+├── package.json
+└── README.md
+            </pre>
+        </div>
+    </div>
 </body>
 </html>
