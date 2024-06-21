@@ -5,6 +5,9 @@ const orders = [];
 exports.processFile = async (filePath) => {
     try {
         const data = fs.readFileSync(filePath, 'utf8');
+         if (!data.trim()) {
+            return []; // Retorna um array vazio se o arquivo estiver vazio
+        }
         const lines = data.split('\n');
         const processedOrders = fileHandler.processLines(lines);
         orders.push(...processedOrders);
