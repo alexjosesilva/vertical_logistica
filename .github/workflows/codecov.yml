@@ -1,29 +1,31 @@
-name: Codecov
+name: CI
 
 on:
   push:
-    branches: [master]
+    branches: [ main ]
   pull_request:
-    branches: [master]
+    branches: [ main ]
 
 jobs:
   test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+    - name: Checkout code
+      uses: actions/checkout@v2
 
-      - name: Set up JDK 17
-        uses: actions/setup-java@v1
-        with:
-          java-version: '17'
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14' # ou a versão do Node.js que você está usando
 
-      - name: Build with Maven
-        run: mvn clean verify
+    - name: Install dependencies
+      run: npm install
 
-      - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v4
-        with:
-          files: target/site/jacoco/jacoco-xml/jacoco.xml
-          token: ${{ secrets.CODECOV_TOKEN }}
+    - name: Run tests
+      run: npm run test
+
+    - name: Upload coverage to Codecov
+      run: npm run coverage
+      env:
+        CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
